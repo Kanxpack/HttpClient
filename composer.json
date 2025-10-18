@@ -1,0 +1,20 @@
+{
+    "name": "kanxpack/httpclient",
+    "description": "Provides a class for sending HTTP requests and receiving HTTP responses from a resource identified by a URI in PHP.",
+    "type": "library",
+    "require": {
+        "kanxpack/curlget": "^1.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Kanxpack\\HttpClient\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Marco Monteiro"
+        }
+    ],
+    "minimum-stability": "stable"
+}
