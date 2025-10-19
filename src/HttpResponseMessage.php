@@ -33,14 +33,6 @@ class HttpResponseMessage {
         return self::getResponse($response);
     }
 
-    public static function ensureSuccessStatusCode() : bool
-    {
-        if (isset(self::getResponse()['status']) && self::getResponse()['status']  == '200') {
-            return true;
-        }
-        return false;
-    }
-
     public static function getResult() : array
     {
         if (isset(self::getResponse()['result']) && self::getResponse()['result']) {
