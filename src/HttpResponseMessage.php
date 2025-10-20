@@ -38,7 +38,23 @@ class HttpResponseMessage {
         if (isset(self::getResponse()['result']) && self::getResponse()['result']) {
             return self::getResponse()['result'];
         }
-        return false;
+        return [];
+    }
+
+    public static function getError() : string
+    {
+        if (isset(self::getResponse()['error']) && self::getResponse()['error']) {
+            return self::getResponse()['error'];
+        }
+        return "";
+    }
+
+    public static function getStatus() : string
+    {
+        if (isset(self::getResponse()['status']) && self::getResponse()['status']) {
+            return self::getResponse()['status'];
+        }
+        return "404";
     }
 
     public static function getRespone() : array
